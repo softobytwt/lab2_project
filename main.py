@@ -235,6 +235,7 @@ def countfiles():
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM py_files')
     py_files = cursor.fetchall()
+    connection.close()
     return {"number of files in ARCHIVE_PYFILES FOLDER": len(py_files)}
     
 
